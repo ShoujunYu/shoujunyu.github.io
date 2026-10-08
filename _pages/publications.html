@@ -1,36 +1,101 @@
+
 ---
 layout: archive
 title: "Publications"
 permalink: /publications/
-author_profile: true
+author_profile: false
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<style>
+/* Page title */
+.page__title {
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 2.5rem;
+  color: #083b08;
+}
 
-{% include base_path %}
+/* Publication section */
+.pub-list {
+  font-family: "Times New Roman", Georgia, serif;
+  margin-top: 1.5rem;
+}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+/* Year headings */
+.pub-year {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #111;
+  margin: 2rem 0 1.2rem;
+}
 
+/* Individual publications */
+.pub-entry {
+  margin-left: 2.5rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  color: #111;
+}
 
+/* Paper titles */
+.pub-title {
+  font-weight: bold;
+}
 
+/* Links */
+.pub-entry a {
+  color: #064b12;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .pub-entry {
+    margin-left: 0.8rem;
+    font-size: 1.05rem;
+  }
+}
+</style>
+
+<div class="pub-list">
+
+{% assign sorted_pubs = site.publications | sort: "date" | reverse %}
+{% assign current_year = "" %}
+
+{% for pub in sorted_pubs %}
+
+  {% assign pub_year = pub.date | date: "%Y" %}
+
+  {% if pub_year != current_year %}
+    <h2 class="pub-year">{{ pub_year }}</h2>
+    {% assign current_year = pub_year %}
+  {% endif %}
+
+  <p class="pub-entry">
+    {% if pub.authors %}
+      {{ pub.authors }}.
+      <strong class="pub-title">{{ pub.title }}</strong>.
+      {{ pub.venue }}.
+    {% else %}
+      {{ pub.citation }}
+    {% endif %}
+
+    {% if pub.pdfurl %}
+      <a href="{{ pub.pdfurl }}">[pdf]</a>
+    {% endif %}
+
+    {% if pub.paperurl %}
+      <a href="{{ pub.paperurl }}">[paper]</a>
+    {% endif %}
+
+    {% if pub.codeurl %}
+      <a href="{{ pub.codeurl }}">[code]</a>
+    {% endif %}
+
+    {% if pub.dataseturl %}
+      <a href="{{ pub.dataseturl }}">[dataset]</a>
+    {% endif %}
+  </p>
+
+{% endfor %}
+
+</div>
