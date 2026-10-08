@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "Activities"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -11,54 +11,18 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D in Pattern Recognition and Intelligent Systems, University of Chinese Academy of Sciences (UCAS) & Shenzhen Institutes of Advanced Technology (SIAT), 2023 - 2027 (expected)
+* M.S. in Electronic Information Engineering, Southern Medical University, 2020 - 2023
+* B.S. in Biomedical Engineering, Southern Medical University, 2016 - 2020
 
-Work experience
+  
+Research Expertise
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* MRI Reconstruction: k-space reconstruction, inverse problems, MRI signal modeling, and image quality assessment.
+* Diffusion MRI: Diffusion signal modeling, spherical harmonics, fiber orientation distribution estimation, and microstructural analysis.
+* Deep Learning: Deep generative modeling, rectified flow, representation learning, and 3D medical image segmentation.
+* Neuroimaging: Fiber tractography, brain connectivity analysis, neuroanatomical segmentation, and cranial nerve imaging.
+  
+Awards
+======
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
