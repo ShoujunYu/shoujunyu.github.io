@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title: "Shoujun Yu"
+title: "About Me"
 name: "Shoujun Yu"
 description: "Personal Academic Website"
 url: "https://shoujunyu.github.io"
