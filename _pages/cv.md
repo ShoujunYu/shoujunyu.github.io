@@ -1,6 +1,7 @@
 ---
 layout: archive
 title: ""
+browser_title: "Shoujun Yu - CV"
 permalink: /cv/
 author_profile: true
 redirect_from:
