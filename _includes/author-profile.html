@@ -8,9 +8,9 @@
 
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
+      <img src="{{ author.avatar }}" alt="{{ author.name }}" fetchpriority="high" />
     {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}"  fetchpriority="high" />
+      <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}" fetchpriority="high" />
     {% endif %}
   </div>
 
@@ -21,156 +21,156 @@
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
-      <!-- Font Awesome icons / Biographic information  -->
+      <!-- Biographic information -->
       {% if author.location %}
-        <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i><span class="profile-label">Location:</span> <span class="profile-value">{{ author.location }}</span></li>
+        <li class="profile-row author__desktop"><i class="fas fa-fw fa-location-dot profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Location:</span> <span class="profile-value">{{ author.location }}</span></div></li>
       {% endif %}
       {% if author.employer %}
-        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i><span class="profile-label">Affiliation:</span> <span class="profile-value">{{ author.employer }}</span></li>
+        <li class="profile-row author__desktop"><i class="fas fa-fw fa-building-columns profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Affiliation:</span> <span class="profile-value">{{ author.employer }}</span></div></li>
       {% endif %}
       {% if author.uri %}
-        <li><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i><span class="profile-label">Website:</span> <a class="profile-value" href="{{ author.uri }}">{{ author.uri | remove: "https://" }}</a></li>
+        <li class="profile-row"><i class="fas fa-fw fa-link profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Website:</span> <a class="profile-value" href="{{ author.uri }}">{{ author.uri | remove: "https://" }}</a></div></li>
       {% endif %}
       {% if author.email %}
-        <li><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i><span class="profile-label">Email:</span> <a class="profile-value" href="mailto:{{ author.email }}">{{ author.email }}</a></li>
+        <li class="profile-row"><i class="fas fa-fw fa-envelope profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Email:</span> <a class="profile-value" href="mailto:{{ author.email }}">{{ author.email }}</a></div></li>
       {% endif %}
 
-      <!-- Font Awesome and Academicons icons / Academic websites -->
+      <!-- Academic websites -->
       {% if author.academia %}
-        <li><a href="{{ author.academia }}"><i class="ai ai-academia ai-fw icon-pad-right" aria-hidden="true"></i>Academia</a></li>
+        <li class="profile-row"><i class="ai ai-academia ai-fw profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Academia:</span> <a class="profile-value" href="{{ author.academia }}">{{ author.academia | remove: "https://" }}</a></div></li>
       {% endif %}
       {% if author.arxiv %}
-        <li><a href="{{ author.arxiv }}"><i class="ai ai-arxiv ai-fw icon-pad-right"></i>arXiv</a></li>
-      {% endif %}      
+        <li class="profile-row"><i class="ai ai-arxiv ai-fw profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">arXiv:</span> <a class="profile-value" href="{{ author.arxiv }}">{{ author.arxiv | remove: "https://" }}</a></div></li>
+      {% endif %}
       {% if author.googlescholar %}
-        <li><i class="ai ai-google-scholar ai-fw icon-pad-right"></i><span class="profile-label">Scholar:</span> <a class="profile-value" href="{{ author.googlescholar }}">Google Scholar</a></li>
+        <li class="profile-row"><i class="ai ai-google-scholar ai-fw profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Scholar:</span> <a class="profile-value" href="{{ author.googlescholar }}">Google Scholar</a></div></li>
       {% endif %}
       {% if author.inspire-hep %}
-        <li><a href="{{ author.inspire-hep }}"><i class="ai ai-inspire ai-fw icon-pad-right"></i>INSPIRE-HEP</a></li>
-      {% endif %}      
+        <li class="profile-row"><i class="ai ai-inspire ai-fw profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">INSPIRE-HEP:</span> <a class="profile-value" href="{{ author.inspire-hep }}">INSPIRE-HEP</a></div></li>
+      {% endif %}
       {% if author.impactstory %}
-        <li><a href="{{ author.impactstory }}"><i class="ai ai-impactstory ai-fw icon-pad-right"></i>Impactstory</a></li>
+        <li class="profile-row"><i class="ai ai-impactstory ai-fw profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Impactstory:</span> <a class="profile-value" href="{{ author.impactstory }}">Impactstory</a></div></li>
       {% endif %}
       {% if author.orcid %}
-        <li><i class="ai ai-orcid ai-fw icon-pad-right"></i><span class="profile-label">ORCID:</span> <a class="profile-value" href="{{ author.orcid }}">{{ author.orcid | remove: "https://" }}</a></li>
+        <li class="profile-row"><i class="ai ai-orcid ai-fw profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">ORCID:</span> <a class="profile-value" href="{{ author.orcid }}">{{ author.orcid | remove: "https://" }}</a></div></li>
       {% endif %}
       {% if author.pubmed %}
-        <li><a href="{{ author.pubmed }}"><i class="ai ai-pubmed ai-fw icon-pad-right"></i>PubMed</a></li>
-      {% endif %}                        
+        <li class="profile-row"><i class="ai ai-pubmed ai-fw profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">PubMed:</span> <a class="profile-value" href="{{ author.pubmed }}">PubMed</a></div></li>
+      {% endif %}
       {% if author.researchgate %}
-        <li><a href="{{ author.researchgate }}"><i class="fab fa-fw fa-researchgate icon-pad-right" aria-hidden="true"></i>ResearchGate</a></li>
+        <li class="profile-row"><i class="fab fa-fw fa-researchgate profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">ResearchGate:</span> <a class="profile-value" href="{{ author.researchgate }}">ResearchGate</a></div></li>
       {% endif %}
       {% if author.scopus %}
-        <li><a href="{{ author.scopus }}"><i class="ai ai-scopus ai-fw icon-pad-right"></i>Scopus</a></li>
+        <li class="profile-row"><i class="ai ai-scopus ai-fw profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Scopus:</span> <a class="profile-value" href="{{ author.scopus }}">Scopus</a></div></li>
       {% endif %}
       {% if author.semantic %}
-        <li><a href="{{ author.semantic }}"><i class="ai ai-semantic-scholar ai-fw icon-pad-right"></i>Semantic Scholar</a></li>
+        <li class="profile-row"><i class="ai ai-semantic-scholar ai-fw profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Semantic Scholar:</span> <a class="profile-value" href="{{ author.semantic }}">Semantic Scholar</a></div></li>
       {% endif %}
       {% if author.ssrn %}
-        <li><a href="{{ author.ssrn }}"><i class="ai ai-ssrn ai-fw icon-pad-right"></i>SSRN</a></li>
+        <li class="profile-row"><i class="ai ai-ssrn ai-fw profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">SSRN:</span> <a class="profile-value" href="{{ author.ssrn }}">SSRN</a></div></li>
       {% endif %}
       {% if author.zotero %}
-        <li><a href="{{ author.zotero }}"><i class="ai ai-zotero ai-fw icon-pad-right"></i>Zotero</a></li>
+        <li class="profile-row"><i class="ai ai-zotero ai-fw profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Zotero:</span> <a class="profile-value" href="{{ author.zotero }}">Zotero</a></div></li>
       {% endif %}
 
-      <!-- Font Awesome icons / Repositories and software development -->
+      <!-- Repositories and software development -->
       {% if author.bitbucket %}
-        <li><a href="https://bitbucket.org/{{ author.bitbucket }}"><i class="fab fa-fw fa-bitbucket icon-pad-right" aria-hidden="true"></i>Bitbucket</a></li>
+        <li class="profile-row"><i class="fab fa-fw fa-bitbucket profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Bitbucket:</span> <a class="profile-value" href="https://bitbucket.org/{{ author.bitbucket }}">bitbucket.org/{{ author.bitbucket }}</a></div></li>
       {% endif %}
       {% if author.codepen %}
-        <li><a href="https://codepen.io/{{ author.codepen }}"><i class="fab fa-fw fa-codepen icon-pad-right" aria-hidden="true"></i>CodePen</a></li>
-      {% endif %}      
+        <li class="profile-row"><i class="fab fa-fw fa-codepen profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">CodePen:</span> <a class="profile-value" href="https://codepen.io/{{ author.codepen }}">codepen.io/{{ author.codepen }}</a></div></li>
+      {% endif %}
       {% if author.dribbble %}
-        <li><a href="https://dribbble.com/{{ author.dribbble }}"><i class="fab fa-fw fa-dribbble icon-pad-right" aria-hidden="true"></i>Dribbble</a></li>
-      {% endif %}      
+        <li class="profile-row"><i class="fab fa-fw fa-dribbble profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Dribbble:</span> <a class="profile-value" href="https://dribbble.com/{{ author.dribbble }}">dribbble.com/{{ author.dribbble }}</a></div></li>
+      {% endif %}
       {% if author.github %}
-        <li><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i><span class="profile-label">GitHub:</span> <a class="profile-value" href="https://github.com/{{ author.github }}">github.com/{{ author.github }}</a></li>
+        <li class="profile-row"><i class="fab fa-fw fa-github profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">GitHub:</span> <a class="profile-value" href="https://github.com/{{ author.github }}">github.com/{{ author.github }}</a></div></li>
       {% endif %}
       {% if author.kaggle %}
-        <li><a href="https://kaggle.com/{{ author.kaggle }}"><i class="fab fa-fw fa-kaggle icon-pad-right" aria-hidden="true"></i>Kaggle</a></li>
-      {% endif %}      
+        <li class="profile-row"><i class="fab fa-fw fa-kaggle profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Kaggle:</span> <a class="profile-value" href="https://kaggle.com/{{ author.kaggle }}">kaggle.com/{{ author.kaggle }}</a></div></li>
+      {% endif %}
       {% if author.stackoverflow %}
-        <li><a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}"><i class="fab fa-fw fa-stack-overflow icon-pad-right" aria-hidden="true"></i>Stackoverflow</a></li>
-      {% endif %}      
+        <li class="profile-row"><i class="fab fa-fw fa-stack-overflow profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Stack Overflow:</span> <a class="profile-value" href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}">stackoverflow.com/users/{{ author.stackoverflow }}</a></div></li>
+      {% endif %}
 
-      <!-- Font Awesome icons / Social media -->
+      <!-- Social media -->
       {% if author.artstation %}
-        <li><a href="https://www.artstation.com/{{ author.artstation }}"><i class="fab fa-fw fa-artstation icon-pad-right" aria-hidden="true"></i>Artstation</a></li>
-      {% endif %}        
+        <li class="profile-row"><i class="fab fa-fw fa-artstation profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">ArtStation:</span> <a class="profile-value" href="https://www.artstation.com/{{ author.artstation }}">{{ author.artstation }}</a></div></li>
+      {% endif %}
       {% if author.bluesky %}
-        <li><a href="https://bsky.app/profile/{{ author.bluesky }}"><i class="fab fa-fw fa-bluesky icon-pad-right" aria-hidden="true"></i>Bluesky</a></li>
+        <li class="profile-row"><i class="fab fa-fw fa-bluesky profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Bluesky:</span> <a class="profile-value" href="https://bsky.app/profile/{{ author.bluesky }}">{{ author.bluesky }}</a></div></li>
       {% endif %}
       {% if author.facebook %}
-        <li><a href="https://www.facebook.com/{{ author.facebook }}"><i class="fab fa-fw fa-facebook-f icon-pad-right" aria-hidden="true"></i>Facebook</a></li>
+        <li class="profile-row"><i class="fab fa-fw fa-facebook-f profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Facebook:</span> <a class="profile-value" href="https://www.facebook.com/{{ author.facebook }}">{{ author.facebook }}</a></div></li>
       {% endif %}
       {% if author.flickr %}
-        <li><a href="https://www.flickr.com/{{ author.flickr }}"><i class="fab fa-fw fa-flickr icon-pad-right" aria-hidden="true"></i>Flickr</a></li>
-      {% endif %}      
+        <li class="profile-row"><i class="fab fa-fw fa-flickr profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Flickr:</span> <a class="profile-value" href="https://www.flickr.com/{{ author.flickr }}">{{ author.flickr }}</a></div></li>
+      {% endif %}
       {% if author.foursquare %}
-        <li><a href="https://foursquare.com/{{ author.foursquare }}"><i class="fab fa-fw fa-foursquare icon-pad-right" aria-hidden="true"></i>Foursquare</a></li>
+        <li class="profile-row"><i class="fab fa-fw fa-foursquare profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Foursquare:</span> <a class="profile-value" href="https://foursquare.com/{{ author.foursquare }}">{{ author.foursquare }}</a></div></li>
       {% endif %}
       {% if author.goodreads %}
-        <li><a href="https://www.goodreads.com/{{ author.goodreads }}"><i class="fab fa-fw fa-goodreads icon-pad-right" aria-hidden="true"></i>Goodreads</a></li>
-      {% endif %}            
+        <li class="profile-row"><i class="fab fa-fw fa-goodreads profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Goodreads:</span> <a class="profile-value" href="https://www.goodreads.com/{{ author.goodreads }}">{{ author.goodreads }}</a></div></li>
+      {% endif %}
       {% if author.google_plus %}
-        <li><a href="https://plus.google.com/+{{ author.google_plus }}"><i class="fab fa-fw fa-google-plus-g icon-pad-right" aria-hidden="true"></i>Google+</a></li>
-      {% endif %}            
+        <li class="profile-row"><i class="fab fa-fw fa-google-plus-g profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Google+:</span> <a class="profile-value" href="https://plus.google.com/+{{ author.google_plus }}">{{ author.google_plus }}</a></div></li>
+      {% endif %}
       {% if author.keybase %}
-        <li><a href="https://keybase.io/{{ author.keybase }}"><i class="fas fa-fw fa-key icon-pad-right" aria-hidden="true"></i>Keybase</a></li>
+        <li class="profile-row"><i class="fas fa-fw fa-key profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Keybase:</span> <a class="profile-value" href="https://keybase.io/{{ author.keybase }}">keybase.io/{{ author.keybase }}</a></div></li>
       {% endif %}
       {% if author.instagram %}
-        <li><a href="https://instagram.com/{{ author.instagram }}"><i class="fab fa-fw fa-instagram icon-pad-right" aria-hidden="true"></i>Instagram</a></li>
-      {% endif %}      
+        <li class="profile-row"><i class="fab fa-fw fa-instagram profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Instagram:</span> <a class="profile-value" href="https://instagram.com/{{ author.instagram }}">instagram.com/{{ author.instagram }}</a></div></li>
+      {% endif %}
       {% if author.lastfm %}
-        <li><a href="https://last.fm/user/{{ author.lastfm }}"><i class="fab fa-fw fa-lastfm icon-pad-right" aria-hidden="true"></i>Last.fm</a></li>
-      {% endif %}      
+        <li class="profile-row"><i class="fab fa-fw fa-lastfm profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Last.fm:</span> <a class="profile-value" href="https://last.fm/user/{{ author.lastfm }}">last.fm/user/{{ author.lastfm }}</a></div></li>
+      {% endif %}
       {% if author.linkedin %}
-        <li><a href="https://www.linkedin.com/in/{{ author.linkedin }}"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
-      {% endif %}      
+        <li class="profile-row"><i class="fab fa-fw fa-linkedin profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">LinkedIn:</span> <a class="profile-value" href="https://www.linkedin.com/in/{{ author.linkedin }}">linkedin.com/in/{{ author.linkedin }}</a></div></li>
+      {% endif %}
       {% if author.mastodon %}
-        <li><a href="{{ author.mastodon }}"><i class="fab fa-fw fa-mastodon icon-pad-right" aria-hidden="true"></i>Mastodon</a></li>
+        <li class="profile-row"><i class="fab fa-fw fa-mastodon profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Mastodon:</span> <a class="profile-value" href="{{ author.mastodon }}">{{ author.mastodon | remove: "https://" }}</a></div></li>
       {% endif %}
       {% if author.medium %}
-        <li><a href="{{ author.medium }}"><i class="fab fa-fw fa-medium icon-pad-right" aria-hidden="true"></i>Medium</a></li>
-      {% endif %}      
+        <li class="profile-row"><i class="fab fa-fw fa-medium profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Medium:</span> <a class="profile-value" href="{{ author.medium }}">{{ author.medium | remove: "https://" }}</a></div></li>
+      {% endif %}
       {% if author.pinterest %}
-        <li><a href="https://www.pinterest.com/{{ author.pinterest }}"><i class="fab fa-fw fa-pinterest icon-pad-right" aria-hidden="true"></i>Pinterest</a></li>
-      {% endif %}            
+        <li class="profile-row"><i class="fab fa-fw fa-pinterest profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Pinterest:</span> <a class="profile-value" href="https://www.pinterest.com/{{ author.pinterest }}">{{ author.pinterest }}</a></div></li>
+      {% endif %}
       {% if author.soundcloud %}
-        <li><a href="https://soundcloud.com/{{ author.soundcloud }}"><i class="fab fa-fw fa-soundcloud icon-pad-right" aria-hidden="true"></i>Soundcloud</a></li>
-      {% endif %}      
+        <li class="profile-row"><i class="fab fa-fw fa-soundcloud profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">SoundCloud:</span> <a class="profile-value" href="https://soundcloud.com/{{ author.soundcloud }}">{{ author.soundcloud }}</a></div></li>
+      {% endif %}
       {% if author.steam %}
-        <li><a href="https://steamcommunity.com/id/{{ author.steam }}"><i class="fab fa-fw fa-steam icon-pad-right" aria-hidden="true"></i>Steam</a></li>
+        <li class="profile-row"><i class="fab fa-fw fa-steam profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Steam:</span> <a class="profile-value" href="https://steamcommunity.com/id/{{ author.steam }}">{{ author.steam }}</a></div></li>
       {% endif %}
       {% if author.telegram %}
-        <li><a href="{{ author.telegram }}"><i class="fab fa-fw fa-telegram icon-pad-right" aria-hidden="true"></i>Telegram</a></li>
-      {% endif %}      
+        <li class="profile-row"><i class="fab fa-fw fa-telegram profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Telegram:</span> <a class="profile-value" href="{{ author.telegram }}">{{ author.telegram | remove: "https://" }}</a></div></li>
+      {% endif %}
       {% if author.tumblr %}
-        <li><a href="https://{{ author.tumblr }}.tumblr.com"><i class="fab fa-fw fa-tumblr icon-pad-right" aria-hidden="true"></i>Tumblr</a></li>
-      {% endif %}      
+        <li class="profile-row"><i class="fab fa-fw fa-tumblr profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Tumblr:</span> <a class="profile-value" href="https://{{ author.tumblr }}.tumblr.com">{{ author.tumblr }}.tumblr.com</a></div></li>
+      {% endif %}
       {% if author.twitter %}
-        <li><a href="https://twitter.com/{{ author.twitter }}"><i class="fab fa-fw fa-x-twitter icon-pad-right" aria-hidden="true"></i>X (formerly Twitter)</a></li>
+        <li class="profile-row"><i class="fab fa-fw fa-x-twitter profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">X / Twitter:</span> <a class="profile-value" href="https://twitter.com/{{ author.twitter }}">{{ author.twitter }}</a></div></li>
       {% endif %}
       {% if author.vine %}
-        <li><a href="https://vine.co/u/{{ author.vine }}"><i class="fab fa-fw fa-vine icon-pad-right" aria-hidden="true"></i>Vine</a></li>
-      {% endif %}        
+        <li class="profile-row"><i class="fab fa-fw fa-vine profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Vine:</span> <a class="profile-value" href="https://vine.co/u/{{ author.vine }}">{{ author.vine }}</a></div></li>
+      {% endif %}
       {% if author.weibo %}
-        <li><a href="https://www.weibo.com/{{ author.weibo }}"><i class="fab fa-fw fa-weibo icon-pad-right" aria-hidden="true"></i>Weibo</a></li>
+        <li class="profile-row"><i class="fab fa-fw fa-weibo profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Weibo:</span> <a class="profile-value" href="https://www.weibo.com/{{ author.weibo }}">{{ author.weibo }}</a></div></li>
       {% endif %}
       {% if author.wikipedia %}
-        <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i class="fab fa-fw fa-wikipedia-w icon-pad-right" aria-hidden="true"></i>Wikipedia</a></li>
-      {% endif %}                
+        <li class="profile-row"><i class="fab fa-fw fa-wikipedia-w profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Wikipedia:</span> <a class="profile-value" href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}">{{ author.wikipedia }}</a></div></li>
+      {% endif %}
       {% if author.xing %}
-        <li><a href="https://www.xing.com/profile/{{ author.xing }}"><i class="fab fa-fw fa-xing icon-pad-right" aria-hidden="true"></i>XING</a></li>
+        <li class="profile-row"><i class="fab fa-fw fa-xing profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">XING:</span> <a class="profile-value" href="https://www.xing.com/profile/{{ author.xing }}">{{ author.xing }}</a></div></li>
       {% endif %}
       {% if author.youtube %}
-        <li><a href="https://www.youtube.com/@{{ author.youtube }}"><i class="fab fa-fw fa-youtube icon-pad-right" aria-hidden="true"></i>YouTube</a></li>
+        <li class="profile-row"><i class="fab fa-fw fa-youtube profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">YouTube:</span> <a class="profile-value" href="https://www.youtube.com/@{{ author.youtube }}">youtube.com/@{{ author.youtube }}</a></div></li>
       {% endif %}
       {% if author.zhihu %}
-      <li><a href="https://www.zhihu.com/people/{{ author.zhihu }}"><i class="fab fa-fw fa-zhihu icon-pad-right" aria-hidden="true"></i>Zhihu</a></li>
-      {% endif %}      
+        <li class="profile-row"><i class="fab fa-fw fa-zhihu profile-icon" aria-hidden="true"></i><div class="profile-text"><span class="profile-label">Zhihu:</span> <a class="profile-value" href="https://www.zhihu.com/people/{{ author.zhihu }}">zhihu.com/people/{{ author.zhihu }}</a></div></li>
+      {% endif %}
+
     </ul>
   </div>
 </div>
