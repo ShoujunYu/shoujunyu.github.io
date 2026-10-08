@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: "Shoujun Yu (余守骏)"
+browser_title: "Shoujun Yu - About Me"
 author_profile: true
 redirect_from: 
   - /about/
