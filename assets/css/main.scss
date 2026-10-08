@@ -129,3 +129,8 @@
 .sidebar .author__urls a.profile-value:hover {
   color: var(--global-link-color-hover);
 }
+
+/* Prevent selected navigation items from changing width */
+.masthead__menu-item.selected a {
+  font-weight: inherit !important;
+}
