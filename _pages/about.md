@@ -1,3 +1,12 @@
+---
+permalink: /
+title: "About Me"
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+
 I am a Ph.D. student in Pattern Recognition and Intelligent Systems at the Shenzhen Institutes of Advanced Technology (SIAT), Chinese Academy of Sciences (CAS).
 
 My research focuses on **medical image analysis, magnetic resonance imaging (MRI), and artificial intelligence**, with particular interests in diffusion MRI, brain microstructure imaging, and deep learning-based medical image reconstruction.
