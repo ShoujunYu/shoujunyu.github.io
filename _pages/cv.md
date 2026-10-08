@@ -11,9 +11,9 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Pattern Recognition and Intelligent Systems, University of Chinese Academy of Sciences (UCAS) & Shenzhen Institutes of Advanced Technology (SIAT), 2023 - 2027 (expected)
-* M.S. in Electronic Information Engineering, Southern Medical University, 2020 - 2023
-* B.S. in Biomedical Engineering, Southern Medical University, 2016 - 2020
+* 2023 - 2027 (expected), Ph.D in Pattern Recognition and Intelligent Systems, University of Chinese Academy of Sciences (UCAS) & Shenzhen Institutes of Advanced Technology (SIAT)
+* 2020 - 2023, M.S. in Electronic Information Engineering, Southern Medical University
+* 2016 - 2020, B.S. in Biomedical Engineering, Southern Medical University
 
   
 Research Expertise
