@@ -37,3 +37,67 @@
     "layout/sidebar",
     "layout/json_cv"
 ;
+
+/* ==========================================
+   Author Profile Customization
+   ========================================== */
+
+/* 取消侧边栏独立滚动 */
+.sidebar {
+  height: auto !important;
+  overflow: visible !important;
+  position: static !important;
+}
+
+/* Profile 信息始终完整显示 */
+.sidebar .author__urls-wrapper {
+  display: block !important;
+  width: 100%;
+  cursor: default;
+}
+
+.sidebar .author__urls {
+  display: block !important;
+  position: static !important;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+/* 每条信息单独一行，过长时自动换行 */
+.sidebar .author__urls li {
+  display: block !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* 链接同样允许换行 */
+.sidebar .author__urls a {
+  display: block;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+
+/* 地点和单位在移动端也显示 */
+.sidebar .author__desktop {
+  display: block !important;
+}
+
+/* 取消 Follow 折叠按钮 */
+.sidebar .author__urls-wrapper button {
+  display: none !important;
+}
+
+/* 取消下拉菜单箭头 */
+.sidebar .author__urls::before,
+.sidebar .author__urls::after {
+  display: none !important;
+}
