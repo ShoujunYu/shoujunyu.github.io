@@ -24,6 +24,6 @@ Research Expertise
 * Deep Learning: Deep generative modeling, rectified flow, representation learning, and 3D medical image segmentation.
 * Neuroimaging: Fiber tractography, brain connectivity analysis, neuroanatomical segmentation, and cranial nerve imaging.
   
-Awards
+Honors & Awards
 ======
 * 2021 — 6th National Undergraduate Biomedical Engineering Innovation Design Competition (Third Prize).
