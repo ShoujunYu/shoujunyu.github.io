@@ -12,9 +12,9 @@ redirect_from:
 
 Education
 ======
-* 2023 - 2027 (expected), Ph.D., Pattern Recognition and Intelligent Systems, University of Chinese Academy of Sciences & Shenzhen Institutes of Advanced Technology (Advisor: Prof.Hairong Zheng & Prof. Shangshan Wang)
-* 2021 - 2023, Visiting Student, Shenzhen Institutes of Advanced Technology (Advisor: Prof.Hao Wang)
-* 2020 - 2023, M.S., Electronic Information Engineering, Southern Medical University (Advisor: Prof.XueFei Yu)
+* 2023 - 2027 (expected), Ph.D., Pattern Recognition and Intelligent Systems, University of Chinese Academy of Sciences & Shenzhen Institutes of Advanced Technology (Advisor: Prof. Hairong Zheng & Prof. Shangshan Wang)
+* 2021 - 2023, Visiting Student, Shenzhen Institutes of Advanced Technology (Advisor: Prof. Hao Wang)
+* 2020 - 2023, M.S., Electronic Information Engineering, Southern Medical University (Advisor: Prof. XueFei Yu)
 * 2016 - 2020, B.S., Biomedical Engineering (Medical Imaging Engineering), Southern Medical University
 
   
