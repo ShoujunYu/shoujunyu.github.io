@@ -78,8 +78,9 @@ author_profile: true
       <a href="{{ pub.codeurl }}">[code]</a>
     {% endif %}
 
-    {% if pub.dataseturl %}
-      <a href="{{ pub.dataseturl }}">[dataset]</a>
+    {% assign dataset_link = pub.dataseturl | default: pub.dataurl %}
+    {% if dataset_link %}
+      <a href="{{ dataset_link }}">[dataset]</a>
     {% endif %}
   </p>
 
