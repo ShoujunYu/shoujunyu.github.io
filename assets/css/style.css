@@ -1,0 +1,44 @@
+/* Standalone, text-first academic homepage. No framework. */
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+body {
+  margin: 0;
+  background: #fff;
+  color: #222;
+  font: 15.5px/1.73 Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 900px; margin: 44px auto 72px; padding: 0 27px; }
+a { color: #155b9a; text-decoration: none; }
+a:hover, a:focus-visible { text-decoration: underline; }
+.simple-nav { text-align: right; font-size: 13px; margin-bottom: 18px; }
+.simple-nav a { margin-left: 20px; color: #555; }
+h1 { font-size: 30px; line-height: 1.35; margin: 0 0 20px; }
+h2 { font-size: 21px; line-height: 1.4; margin: 0 0 17px; }
+h3 { font-size: 17px; margin: 19px 0 8px; }
+p { margin: 0 0 13px; }
+section { margin-top: 28px; }
+hr { border: 0; border-top: 1px solid #ddd; margin: 31px 0; }
+.profile::after { content: ""; display: block; clear: both; }
+.portrait { float: right; width: 152px; height: 184px; margin: 2px 0 14px 28px; overflow: hidden; }
+.portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.contacts { margin-top: 17px; }
+.contacts a { margin-right: 16px; }
+.education { padding: 0; margin: 0; list-style: none; }
+.education li { margin-bottom: 16px; }
+.education .degree { color: #555; }
+.publication { margin: 0 0 17px 0; }
+.pub-links a { margin-right: 8px; white-space: nowrap; }
+.pub-meta { color: #444; }
+.muted { color: #777; }
+.footer { color: #888; font-size: 12px; margin-top: 42px; }
+@media (max-width: 600px) {
+  .container { margin: 23px auto 52px; padding: 0 19px; }
+  .simple-nav { text-align: left; margin-bottom: 25px; }
+  .simple-nav a { margin: 0 17px 0 0; }
+  h1 { font-size: 27px; }
+  .portrait { width: 116px; height: 145px; margin-left: 17px; }
+  body { font-size: 15px; }
+}
+@media print { .simple-nav { display: none; } .container { margin: 0 auto; } a { color: inherit; } }

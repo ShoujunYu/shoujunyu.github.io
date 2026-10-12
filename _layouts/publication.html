@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | escape }} — Shoujun Yu</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+<main class="container">
+  <p><a href="{{ '/#publications' | relative_url }}">← Back to Publications</a></p>
+  <h1>{{ page.title | escape }}</h1>
+  <p>{{ page.authors }}</p>
+  <p class="muted">{{ page.venue | escape }}</p>
+  <p class="pub-links">
+    {% if page.paperurl %}<a href="{{ page.paperurl }}">[paper]</a>{% endif %}
+    {% if page.pdfurl %}<a href="{{ page.pdfurl }}">[pdf]</a>{% endif %}
+    {% if page.codeurl %}<a href="{{ page.codeurl }}">[code]</a>{% endif %}
+    {% assign dataset_link = page.dataseturl | default: page.dataurl %}
+    {% if dataset_link %}<a href="{{ dataset_link }}">[dataset]</a>{% endif %}
+  </p>
+  {{ content }}
+</main>
+</body>
+</html>
