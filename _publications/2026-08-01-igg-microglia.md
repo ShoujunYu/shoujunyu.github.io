@@ -1,7 +1,7 @@
 ---
 title: 'Gamma-type immunoglobulin enhances phagocytosis of amyloid-beta fibrils by microglia'
-category: manuscripts
-date: '2026-08-01'
+category: Article
+date: '2024-07-29'
 venue: Neural Regeneration Research, 21(8), 3668–3676
 authors: Tian Zhou, Yue Zhong, <strong>Shoujun Yu</strong>, et al.
 collection: publications
