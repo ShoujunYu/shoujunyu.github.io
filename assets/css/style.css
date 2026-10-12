@@ -42,3 +42,13 @@ hr { border: 0; border-top: 1px solid #ddd; margin: 31px 0; }
   body { font-size: 15px; }
 }
 @media print { .simple-nav { display: none; } .container { margin: 0 auto; } a { color: inherit; } }
+
+.contacts .contact-row {
+  display: block;
+  margin-bottom: 6px;
+}
+.contacts i {
+  width: 20px;
+  margin-right: 6px;
+  text-align: center;
+}
