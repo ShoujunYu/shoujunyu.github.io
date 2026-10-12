@@ -55,7 +55,7 @@ permalink: /
       {% endif %}
       <article class="publication">
         {% if pub.authors %}{{ pub.authors }}. {% endif %}
-        {% if pub.paperurl %}<strong><a href="{{ pub.paperurl }}">{{ pub.title | escape }}</a></strong>{% else %}<strong>{{ pub.title | escape }}</strong>{% endif %}.
+        <strong>{{ pub.title | escape }}</strong>.
         <span class="pub-meta">{{ pub.venue | escape }}.</span>
         <span class="pub-links">
           {% if pub.paperurl %}<a href="{{ pub.paperurl }}">[paper]</a>{% endif %}
